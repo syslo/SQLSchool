@@ -1,0 +1,14 @@
+{
+    "databaseUrl": "db.sqlite3",
+    "maxHistoryItems": 50,
+    "storagePrefix": "sqlskola/",
+    "editor": {
+        "value": "SELECT * FROM 'sqlite_master'"
+    },
+    "examples": [
+        {
+            "description": "Vylistuj tabuľky",
+            "query": "SELECT name FROM 'sqlite_master' WHERE type = 'table'"
+        }
+    ]
+}
