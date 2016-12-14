@@ -148,6 +148,7 @@ function main(conf, ctx) {
         '#' + options.id + '-row-' + index + ' .query-setter'
       ).click(function () {
         ctx.editor.setValue(row.query)
+        window.location.hash = ''
         window.location.hash = 'editor'
       })
     })
