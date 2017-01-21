@@ -87,19 +87,20 @@ function main(conf, ctx) {
     )
   }
 
-  function renderResultButton(index) {
+  function renderResultHeader(index, count) {
     return (
+      'Počet riadkov výsledku: ' + count + '<br/>' +
       '<button ' +
         'class="btn btn-xs" '+
         'onclick="selectText(\'result-table-' + index + '\').select();" ' +
-      '>Označ výsledok</button> ' +
+      '>Označ</button> ' +
       '<small> (po označení je možné výsledok skopírovať do tabuľkových procesorov)</small>'
     )
   }
 
   function renderResult(result, index) {
    return (
-      '<p>' + renderResultButton(index) + '</p>' +
+      '<p>' + renderResultHeader(index, result.values.length) + '</p>' +
       '<p>' + renderTable(result, "result-table-" + index) + '</p>'
     )
   }
